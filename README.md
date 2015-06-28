@@ -1,7 +1,9 @@
 FlameCore Essentials
 ====================
 
+[![Build Status](https://img.shields.io/travis/FlameCore/Essentials.svg)](https://travis-ci.org/FlameCore/Essentials)
 [![Scrutinizer](http://img.shields.io/scrutinizer/g/FlameCore/Essentials.svg)](https://scrutinizer-ci.com/g/FlameCore/Essentials)
+[![Coverage](http://img.shields.io/scrutinizer/coverage/g/FlameCore/Essentials.svg)](https://scrutinizer-ci.com/g/FlameCore/Essentials)
 [![License](http://img.shields.io/packagist/l/flamecore/essentials.svg)](http://www.flamecore.org/projects/essentials)
 
 This library provides essential helper classes for Social Networking sites.
