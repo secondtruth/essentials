@@ -92,7 +92,7 @@ class LinkFormatter
     {
         if ($template !== null) {
             if ($this->hasTemplate($type)) {
-                throw new \LogicException(sprintf('', $type));
+                throw new \LogicException(sprintf('The link type "%s" has already a template assigned.', $type));
             }
 
             $this->setTemplate($type, $template);
