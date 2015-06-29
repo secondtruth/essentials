@@ -34,7 +34,13 @@ class UtilTest extends \PHPUnit_Framework_TestCase
 {
     public function testMakeSlug()
     {
-        $this->assertEquals('foo-bar-baz-foo--aeoeue', Util::makeSlug('foo_bar, baz-foo;  äöü'));
+        if (function_exists('iconv')) {
+            $umlauts = @iconv('UTF-8', 'ASCII//TRANSLIT', 'äöü');
+            $this->assertEquals("foo-bar-baz-foo--$umlauts", Util::makeSlug('foo_bar, baz-foo;  äöü'));
+        } else {
+            $this->assertEquals('foo-bar-baz-foo--foo', Util::makeSlug('foo_bar, baz-foo;  foo'));
+        }
+
         $this->assertEquals('foo_bar_baz_foo', Util::makeSlug('foo-bar baz foo', '_'));
         $this->assertEquals('foo_bar_baz', Util::makeSlug('foo-bar baz äöü', '_', false));
     }

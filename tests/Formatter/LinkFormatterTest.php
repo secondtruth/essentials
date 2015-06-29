@@ -84,6 +84,16 @@ class LinkFormatterTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $formatter->getTemplates());
     }
 
+    /**
+     * @expectedException \LogicException
+     * @expectedExceptionMessage The link type "web" has already a template assigned.
+     */
+    public function testRegisterWithExistingTemplate()
+    {
+        $formatter = new LinkFormatter();
+        $formatter->register('@(\w+)', 'web', '<a href="/{#1}">{title}</a>');
+    }
+
     public function testSetTemplate()
     {
         $formatter = new LinkFormatter();
