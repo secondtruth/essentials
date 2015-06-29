@@ -18,7 +18,7 @@
  * @package  FlameCore\Essentials
  * @version  0.1-dev
  * @link     http://www.flamecore.org
- * @license  ISC License <http://opensource.org/licenses/ISC>
+ * @license  http://opensource.org/licenses/ISC ISC License
  */
 
 namespace FlameCore\Essentials\Formatter;
@@ -44,7 +44,7 @@ class RelativeTimeFormatter
      * @param string $separator (Default: `', '`)
      * @return string
      */
-    function format($time, $precision = 1, $separator = ', ')
+    public function format($time, $precision = 1, $separator = ', ')
     {
         $passed = time() - $time;
 

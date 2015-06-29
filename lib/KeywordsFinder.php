@@ -18,7 +18,7 @@
  * @package  FlameCore\Essentials
  * @version  0.1-dev
  * @link     http://www.flamecore.org
- * @license  ISC License <http://opensource.org/licenses/ISC>
+ * @license  http://opensource.org/licenses/ISC ISC License
  */
 
 namespace FlameCore\Essentials;
@@ -38,7 +38,7 @@ class KeywordsFinder
     /**
      * @param array $stopwords
      */
-    function __construct(array $stopwords = null)
+    public function __construct(array $stopwords = null)
     {
         if ($stopwords !== null) {
             $this->addStopwords($stopwords);
