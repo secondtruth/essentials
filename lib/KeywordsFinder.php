@@ -87,8 +87,9 @@ class KeywordsFinder
      */
     public function addStopwords(array $stopwords)
     {
-        $stopwords = array_map([$this, 'clean'], $stopwords);
-        $this->stopwords = array_merge($this->stopwords, $stopwords);
+        foreach ($stopwords as $stopword) {
+            $this->addStopword($stopword);
+        }
     }
 
     /**

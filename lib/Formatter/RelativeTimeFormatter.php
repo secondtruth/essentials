@@ -59,10 +59,10 @@ class RelativeTimeFormatter
                     break;
                 }
 
-                $result = floor($passed / $period);
-                if ($result > 0) {
-                    $list[] = $result.' '.$this->translate($result == 1 ? $name[0] : $name[1]);
-                    $passed -= $result * $period;
+                $num = floor($passed / $period);
+                if ($num > 0) {
+                    $list[] = sprintf('%d %s', $num, $this->translate($num == 1 ? $name[0] : $name[1]));
+                    $passed -= $num * $period;
                     $exit++;
                 } elseif ($exit > 0) {
                     $exit++;
