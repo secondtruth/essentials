@@ -27,8 +27,6 @@ use FlameCore\Essentials\KeywordsFinder;
 
 /**
  * Test class for KeywordsFinder
- *
- * @author   Christian Neff <christian.neff@gmail.com>
  */
 class KeywordsFinderTest extends \PHPUnit_Framework_TestCase
 {

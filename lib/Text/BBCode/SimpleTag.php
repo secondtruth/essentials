@@ -31,6 +31,8 @@ namespace FlameCore\Essentials\Text\BBCode;
 class SimpleTag implements TagInterface
 {
     /**
+     * The replacement string using a sprintf() variable for the inner text
+     *
      * @var string
      */
     protected $replacement = '%s';
@@ -44,6 +46,8 @@ class SimpleTag implements TagInterface
     }
 
     /**
+     * Returns the replacement string.
+     *
      * @return string
      */
     public function getReplacement()
@@ -52,7 +56,9 @@ class SimpleTag implements TagInterface
     }
 
     /**
-     * @param string $replacement
+     * Sets the replacement string.
+     *
+     * @param string $replacement The replacement string using a sprintf() variable for the inner text
      */
     public function setReplacement($replacement)
     {

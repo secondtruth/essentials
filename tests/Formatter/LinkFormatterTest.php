@@ -27,8 +27,6 @@ use FlameCore\Essentials\Formatter\LinkFormatter;
 
 /**
  * Test class for LinkFormatter
- *
- * @author   Christian Neff <christian.neff@gmail.com>
  */
 class LinkFormatterTest extends \PHPUnit_Framework_TestCase
 {

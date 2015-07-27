@@ -27,8 +27,6 @@ use FlameCore\Essentials\Formatter\RelativeTimeFormatter;
 
 /**
  * Test class for RelativeTimeFormatter
- *
- * @author   Christian Neff <christian.neff@gmail.com>
  */
 class RelativeTimeFormatterTest extends \PHPUnit_Framework_TestCase
 {

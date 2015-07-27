@@ -38,10 +38,12 @@ class Util
     }
 
     /**
-     * @param string $string
-     * @param string $separator
-     * @param bool $normalize
-     * @return string
+     * Generates a slug for the given string.
+     *
+     * @param string $string The string to slugify
+     * @param string $separator The words separator
+     * @param bool $normalize Normalize non-latin characters
+     * @return string Returns the slug.
      */
     public static function makeSlug($string, $separator = '-', $normalize = true)
     {
@@ -60,10 +62,12 @@ class Util
     }
 
     /**
-     * @param string[] $tags
-     * @param string $separator
-     * @param string|bool $link
-     * @return string
+     * Generates a tag list.
+     *
+     * @param string[] $tags The tags
+     * @param string $separator The tag separator
+     * @param string|bool $link The link URL including a sprintf variable for the tag.
+     * @return string Returns the tag list.
      */
     public static function listTags(array $tags, $separator = ', ', $link = false)
     {

@@ -31,9 +31,11 @@ namespace FlameCore\Essentials\Text\BBCode;
 interface TagInterface
 {
     /**
-     * @param string $inner
-     * @param string $param
-     * @param string $tag
+     * Returns the tag replacement.
+     *
+     * @param string $inner The inner text
+     * @param string $param The parameter value
+     * @param string $tag Tthe tag name
      * @return string
      */
     public function replace($inner, $param = null, $tag = null);

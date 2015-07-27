@@ -31,6 +31,8 @@ namespace FlameCore\Essentials\Text;
 abstract class AbstractTextParser implements ParserInterface
 {
     /**
+     * The list of symbols
+     *
      * @var array
      */
     protected $symbols = array(
@@ -38,6 +40,8 @@ abstract class AbstractTextParser implements ParserInterface
     );
 
     /**
+     * The list of emoticons
+     *
      * @var array
      */
     protected $emoticons = array(
@@ -47,6 +51,8 @@ abstract class AbstractTextParser implements ParserInterface
     );
 
     /**
+     * The emoticons URL
+     *
      * @var string
      */
     protected $emoticonsUrl;
@@ -74,6 +80,8 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
+     * Returns the list of symbols.
+     *
      * @return array
      */
     public function getSymbols()
@@ -82,8 +90,10 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
-     * @param string $symbol
-     * @param string $replacement
+     * Sets the replacement for the given symbol.
+     *
+     * @param string $symbol The symbol
+     * @param string $replacement The replacement
      */
     public function setSymbol($symbol, $replacement)
     {
@@ -91,7 +101,9 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
-     * @param array $symbols
+     * Sets the given symbols with their replacements.
+     *
+     * @param array $symbols The list of symbols
      */
     public function setSymbols(array $symbols)
     {
@@ -101,6 +113,8 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
+     * Returns the list of emoticons.
+     *
      * @return array
      */
     public function getEmoticons()
@@ -109,8 +123,10 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
-     * @param string $emoticon
-     * @param string $replacement
+     * Sets the replacement for the given emoticon.
+     *
+     * @param string $emoticon The emoticon
+     * @param string $replacement The replacement
      */
     public function setEmoticon($emoticon, $replacement)
     {
@@ -118,7 +134,9 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
-     * @param array $emoticons
+     * Sets the given emoticons with their replacements.
+     *
+     * @param array $emoticons The list of emoticons
      */
     public function setEmoticons(array $emoticons)
     {
@@ -128,6 +146,8 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
+     * Returns the emoticons URL.
+     *
      * @return string
      */
     public function getEmoticonsUrl()
@@ -136,6 +156,8 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
+     * Sets the emoticons URL.
+     *
      * @param string $emoticonsUrl
      */
     public function setEmoticonsUrl($emoticonsUrl)
@@ -144,12 +166,16 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
+     * Formats the string.
+     *
      * @param string $string
      * @return string
      */
     abstract protected function format($string);
 
     /**
+     * Replaces the symbols in the string.
+     *
      * @param string $string
      * @return string
      */
@@ -167,6 +193,8 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
+     * Replaces the emoticons in the string.
+     *
      * @param string $string
      * @return string
      */
@@ -184,6 +212,8 @@ abstract class AbstractTextParser implements ParserInterface
     }
 
     /**
+     * Renders the paragraphs.
+     *
      * @param string[] $paragraphs
      * @return string
      */

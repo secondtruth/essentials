@@ -27,8 +27,6 @@ use FlameCore\Essentials\Util;
 
 /**
  * Test class for Util
- *
- * @author   Christian Neff <christian.neff@gmail.com>
  */
 class UtilTest extends \PHPUnit_Framework_TestCase
 {

@@ -31,8 +31,10 @@ namespace FlameCore\Essentials\Text;
 interface ParserInterface
 {
     /**
+     * Parses the given text.
+     *
      * @param string $string The string to parse
-     * @return string
+     * @return string Returns the formatted version of the text.
      */
     public function parse($string);
 }

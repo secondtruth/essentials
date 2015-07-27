@@ -33,6 +33,8 @@ use FlameCore\Essentials\Formatter\LinkFormatter;
 class SimpleTextParser extends AbstractTextParser
 {
     /**
+     * List of link patterns
+     *
      * @var string[]
      */
     protected $linkPatterns = array(
@@ -41,12 +43,16 @@ class SimpleTextParser extends AbstractTextParser
     );
 
     /**
+     * The link formatter to use
+     *
      * @var \FlameCore\Essentials\Formatter\LinkFormatter
      */
     protected $linkFormatter;
 
     /**
-     * @param \FlameCore\Essentials\Formatter\LinkFormatter $linkFormatter
+     * Creates a SimpleTextParser object.
+     *
+     * @param \FlameCore\Essentials\Formatter\LinkFormatter $linkFormatter The link formatter to use
      */
     public function __construct(LinkFormatter $linkFormatter = null)
     {
@@ -54,6 +60,8 @@ class SimpleTextParser extends AbstractTextParser
     }
 
     /**
+     * Returns the list of link patterns.
+     *
      * @return string[]
      */
     public function getLinkPatterns()
@@ -62,7 +70,9 @@ class SimpleTextParser extends AbstractTextParser
     }
 
     /**
-     * @param string $linkPattern
+     * Adds the given link pattern.
+     *
+     * @param string $linkPattern The link pattern to add
      */
     public function addLinkPattern($linkPattern)
     {
@@ -70,7 +80,9 @@ class SimpleTextParser extends AbstractTextParser
     }
 
     /**
-     * @param string[] $linkPatterns
+     * Adds the given link patterns.
+     *
+     * @param string[] $linkPatterns The list of link patterns to add
      */
     public function addLinkPatterns(array $linkPatterns)
     {
@@ -80,6 +92,8 @@ class SimpleTextParser extends AbstractTextParser
     }
 
     /**
+     * Returns the link formatter to use.
+     *
      * @return \FlameCore\Essentials\Formatter\LinkFormatter
      */
     public function getLinkFormatter()
@@ -88,7 +102,9 @@ class SimpleTextParser extends AbstractTextParser
     }
 
     /**
-     * @param \FlameCore\Essentials\Formatter\LinkFormatter $linkFormatter
+     * Sets the link formatter to use.
+     *
+     * @param \FlameCore\Essentials\Formatter\LinkFormatter $linkFormatter The link formatter to use
      */
     public function setLinkFormatter(LinkFormatter $linkFormatter)
     {

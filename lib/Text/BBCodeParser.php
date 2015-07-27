@@ -33,11 +33,15 @@ use FlameCore\Essentials\Text\BBCode\TagInterface;
 class BBCodeParser extends AbstractTextParser
 {
     /**
+     * The list of registered tags
+     *
      * @var \FlameCore\Essentials\Text\BBCode\TagInterface[]
      */
     protected $tags = array();
 
     /**
+     * Returns the list of registered tags.
+     *
      * @return \FlameCore\Essentials\Text\BBCode\TagInterface[]
      */
     public function getTags()
@@ -46,8 +50,10 @@ class BBCodeParser extends AbstractTextParser
     }
 
     /**
-     * @param string $name
-     * @param \FlameCore\Essentials\Text\BBCode\TagInterface $tag
+     * Registers the given tag.
+     *
+     * @param string $name The tag name
+     * @param \FlameCore\Essentials\Text\BBCode\TagInterface $tag The tag object
      */
     public function register($name, TagInterface $tag)
     {
@@ -55,7 +61,9 @@ class BBCodeParser extends AbstractTextParser
     }
 
     /**
-     * @param \FlameCore\Essentials\Text\BBCode\TagInterface[] $tags
+     * Registers all given tags.
+     *
+     * @param \FlameCore\Essentials\Text\BBCode\TagInterface[] $tags The tags
      */
     public function registerAll(array $tags)
     {
@@ -87,9 +95,11 @@ class BBCodeParser extends AbstractTextParser
     }
 
     /**
-     * @param string $tag
-     * @param string $inner
-     * @param string $param
+     * Returns the tag replacement.
+     *
+     * @param string $tag Tthe tag name
+     * @param string $inner The inner text
+     * @param string $param The parameter value
      * @return string
      */
     protected function getReplacement($tag, $inner, $param)

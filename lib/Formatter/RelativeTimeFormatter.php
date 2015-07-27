@@ -39,10 +39,12 @@ class RelativeTimeFormatter
     const SECOND = 1;
 
     /**
-     * @param int $time
-     * @param int $precision (Default: `1`)
-     * @param string $separator (Default: `', '`)
-     * @return string
+     * Formats the given time.
+     *
+     * @param int $time The timestamp
+     * @param int $precision The number of shown units
+     * @param string $separator The unit separator
+     * @return string Returns the formatted time.
      */
     public function format($time, $precision = 1, $separator = ', ')
     {
@@ -74,6 +76,8 @@ class RelativeTimeFormatter
     }
 
     /**
+     * Returns the periods to names map. The names array defines singular and plural.
+     *
      * @return array
      */
     protected function getPeriods()
@@ -90,9 +94,11 @@ class RelativeTimeFormatter
     }
 
     /**
-     * @param string $string
-     * @param array $vars
-     * @return string
+     * Translates the given string.
+     *
+     * @param string $string The string to translate
+     * @param array $vars The variables to replace
+     * @return string Returns the translated string.
      */
     protected function translate($string, array $vars = null)
     {

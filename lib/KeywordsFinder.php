@@ -31,12 +31,16 @@ namespace FlameCore\Essentials;
 class KeywordsFinder
 {
     /**
-     * @var array
+     * The list of stopwords
+     *
+     * @var string[]
      */
     protected $stopwords = array();
 
     /**
-     * @param array $stopwords
+     * Creates a KeywordsFinder object.
+     *
+     * @param string[] $stopwords The list of stopwords
      */
     public function __construct(array $stopwords = null)
     {
@@ -46,8 +50,10 @@ class KeywordsFinder
     }
 
     /**
-     * @param string $string
-     * @return array
+     * Finds the keywords in the given string.
+     *
+     * @param string $string The string
+     * @return string[] Returns a list of found keywords.
      */
     public function find($string)
     {
@@ -67,7 +73,9 @@ class KeywordsFinder
     }
 
     /**
-     * @return array
+     * Returns the list of stopwords.
+     *
+     * @return string[]
      */
     public function getStopwords()
     {
@@ -75,7 +83,9 @@ class KeywordsFinder
     }
 
     /**
-     * @param string $stopword
+     * Adds the given stopword.
+     *
+     * @param string $stopword The stopword to add
      */
     public function addStopword($stopword)
     {
@@ -83,7 +93,9 @@ class KeywordsFinder
     }
 
     /**
-     * @param array $stopwords
+     * Adds the given stopwords.
+     *
+     * @param string[] $stopwords The stopwords to add
      */
     public function addStopwords(array $stopwords)
     {
@@ -93,8 +105,10 @@ class KeywordsFinder
     }
 
     /**
-     * @param string $string
-     * @return string
+     * Cleans the given string.
+     *
+     * @param string $string The string to clean
+     * @return string Returns the cleaned string.
      */
     protected function clean($string)
     {

@@ -31,6 +31,8 @@ namespace FlameCore\Essentials\Formatter;
 class LinkFormatter
 {
     /**
+     * The pattern to template map
+     *
      * @var array
      */
     protected $patterns = array(
@@ -42,6 +44,8 @@ class LinkFormatter
     );
 
     /**
+     * The list of templates
+     *
      * @var array
      */
     protected $templates = array(
@@ -53,9 +57,11 @@ class LinkFormatter
     );
 
     /**
-     * @param string $link
-     * @param string $title (optional)
-     * @return string
+     * Formats the given link.
+     *
+     * @param string $link The link
+     * @param string $title The optional title of the link
+     * @return string Returns the formatted link.
      */
     public function format($link, $title = null)
     {
@@ -76,6 +82,8 @@ class LinkFormatter
     }
 
     /**
+     * Returns the pattern to template map.
+     *
      * @return array
      */
     public function getPatterns()
@@ -84,9 +92,11 @@ class LinkFormatter
     }
 
     /**
-     * @param string $pattern
-     * @param string $type
-     * @param callable|string $template (optional)
+     * Registers a link pattern.
+     *
+     * @param string $pattern The link pattern
+     * @param string $type The link type
+     * @param callable|string $template The template content, if this is a new link type
      */
     public function register($pattern, $type, $template = null)
     {
@@ -102,6 +112,8 @@ class LinkFormatter
     }
 
     /**
+     * Returns the list of templates.
+     *
      * @return array
      */
     public function getTemplates()
@@ -110,7 +122,9 @@ class LinkFormatter
     }
 
     /**
-     * @param string $type
+     * Returns whether a template for the given link type is defined.
+     *
+     * @param string $type The link type
      * @return bool
      */
     public function hasTemplate($type)
@@ -119,8 +133,10 @@ class LinkFormatter
     }
 
     /**
-     * @param string $type
-     * @param callable|string $template
+     * Sets the template for the given link type.
+     *
+     * @param string $type The link type
+     * @param callable|string $template The template content
      */
     public function setTemplate($type, $template)
     {
@@ -137,7 +153,7 @@ class LinkFormatter
      * @param string $template The template
      * @param string $title The link title
      * @param array $matches The pattern matches
-     * @return string
+     * @return string Returns the rendered template.
      */
     protected function renderLink($template, $title, array $matches)
     {
