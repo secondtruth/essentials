@@ -9,6 +9,22 @@ FlameCore Essentials
 This library provides essential helper classes for Social Networking sites.
 
 
+Features
+--------
+
+* **Formatters:** Format meta information and text fragments
+
+    Classes: `LinkFormatter`, `RelativeTimeFormatter`
+
+* **Text Parsers:** Parse and format all types of text
+
+    Classes: `SimpleTextParser`, `BBCodeParser`
+
+* **Helpers:** Many useful helper classes
+
+    Classes: `KeywordsFinder`, `Slugifier`, `WordlistGenerator`
+
+
 Installation
 ------------
 
