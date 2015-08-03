@@ -1,6 +1,7 @@
 FlameCore Essentials
 ====================
 
+[![Latest Stable](http://img.shields.io/packagist/v/flamecore/essentials.svg)](https://packagist.org/packages/flamecore/essentials)
 [![Build Status](https://img.shields.io/travis/FlameCore/Essentials.svg)](https://travis-ci.org/FlameCore/Essentials)
 [![Scrutinizer](http://img.shields.io/scrutinizer/g/FlameCore/Essentials.svg)](https://scrutinizer-ci.com/g/FlameCore/Essentials)
 [![Coverage](http://img.shields.io/scrutinizer/coverage/g/FlameCore/Essentials.svg)](https://scrutinizer-ci.com/g/FlameCore/Essentials)
@@ -35,7 +36,7 @@ Create a file called `composer.json` in your project directory and put the follo
 ```
 {
     "require": {
-        "flamecore/essentials": "dev-master"
+        "flamecore/essentials": "0.1.*"
     }
 }
 ```

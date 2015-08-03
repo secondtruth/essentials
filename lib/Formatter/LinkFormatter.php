@@ -8,7 +8,7 @@
  * above copyright notice and this permission notice appear in all copies.
  *
  * @package  FlameCore\Essentials
- * @version  0.1-dev
+ * @version  0.1
  * @link     http://www.flamecore.org
  * @license  http://opensource.org/licenses/ISC ISC License
  */
